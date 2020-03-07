@@ -1,7 +1,7 @@
 const express = require('express');
 require('dotenv').config();
 const PORT = process.env.PORT || 5000;
-const flash = require('connect-flsh');
+const flash = require('connect-flash');
 const passport = require('passport');
 const request = require('request');
 const session = require('express-session');
@@ -24,3 +24,4 @@ app.set('view options', { layout: false });
 
 require('./lib/routes.js')(app);
 
+app.listen(PORT);
